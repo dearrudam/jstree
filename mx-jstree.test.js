@@ -1,5 +1,6 @@
 import assert from "assert";
-import Tree from "./../src/index";
+import { describe, it } from "mocha";
+import Tree from "./mx-jstree";
 
 const array = `
     [
@@ -21,7 +22,7 @@ describe(`Given a tree instance based on the array : \n ${array} \n`, function()
     { givenId: 4, expectedValue: 1 }
   ];
 
-  scenarios.forEach((scenario, index) => {
+  scenarios.forEach(scenario => {
     it(`Then, given ${
       scenario.givenId
     } as ID for the tree.count() function, then the children number should be equals to ${
